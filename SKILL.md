@@ -1,3 +1,7 @@
+---
+name: session-recall
+description: Read and search this agent's other conversations on demand - find what was decided in a different window, recover detail that compaction dropped, or check what an earlier session actually changed, without loading a whole transcript into context. Use when work is split across conversations, when earlier context is missing, or when the user refers to something discussed elsewhere. Cross-conversation reading happens only when the user asks for it in that turn; default scope is the current conversation.
+---
 # Session recall (read other DSH conversations on demand)
 
 > **Public release note.** This is the field-notes file the skill ships with. Conversation

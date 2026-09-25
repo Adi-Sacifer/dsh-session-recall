@@ -103,6 +103,18 @@ Records are JSONL. The shape worth knowing:
 `SKILL.md` carries the front-matter and the scope rules and is written to be loaded straight into
 an agent's context. Drop `SKILL.md` plus `scripts/` into your agent's skill directory.
 
+### Portability
+
+The front-matter is the open **Agent Skills** format — `name` plus `description` — which Claude
+Code, Codex and DSH all read. **The `description` field is the routing contract:** it is what the
+agent sees before deciding whether to load the skill at all, so it is written to say both when
+this applies and when it does not. Dropping the front-matter does not make the skill "simpler",
+it makes it invisible.
+
+What travels between hosts is the format and the instructions. What may not travel is whatever a
+skill shells out to. This one is plain Node with no packages, so it runs anywhere Node 22+ does;
+a skill that assumes `bash`, macOS paths, or a specific host's built-in tools will not.
+
 ## Limits
 
 - Only conversations that still exist on disk.
